@@ -3,9 +3,10 @@ import { Client, GatewayIntentBits } from 'discord.js';
 
 const client = new Client({
   intents: [
-    GatewayIntentBits.Guilds,
-    GatewayIntentBits.GuildMessages,
-    GatewayIntentBits.MessageContent,
+    GatewayIntentBits.Guilds,               // Required to access the guilds
+    GatewayIntentBits.GuildMessages,        // Required to read messages in guilds
+    GatewayIntentBits.MessageContent,       // Required to read the message content (e.g., for commands)
+    GatewayIntentBits.GuildMessageReactions // Required to handle reactions if your bot will use them
   ],
 });
 
