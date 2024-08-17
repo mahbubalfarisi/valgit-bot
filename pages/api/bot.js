@@ -14,7 +14,7 @@ client.once('ready', () => {
 });
 
 client.on('messageCreate', message => {
-  if (message.content === '!ping') {
+  if (message.content === '!pinggu') {
     message.channel.send('Pong!');
   }
 });
