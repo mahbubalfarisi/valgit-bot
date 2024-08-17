@@ -1,11 +1,11 @@
 // pages/api/bot.js
-import { Client } from 'discord.js';
+import { Client, GatewayIntentBits } from 'discord.js';
 
 const client = new Client({
   intents: [
-    'GUILDS',
-    'GUILD_MESSAGES',
-    'MESSAGE_CONTENT',
+    GatewayIntentBits.Guilds,
+    GatewayIntentBits.GuildMessages,
+    GatewayIntentBits.MessageContent,
   ],
 });
 
